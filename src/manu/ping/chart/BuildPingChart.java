@@ -77,7 +77,7 @@ public class BuildPingChart {
 		ONE_WEEK("one week", "1 WEEK"), 
 		TWO_WEEKS("two weeks", "2 WEEK"), 
 		ONE_MONTH("one month","1 MONTH"), 
-		//THREE_MONTHS("three months","3 MONTH"), 
+		THREE_MONTHS("three months","3 MONTH"), 
 		//SIX_MONTHS("six months", "6 MONTH"), 
 		//ONE_YEAR("one year", "1 YEAR")
 		;
