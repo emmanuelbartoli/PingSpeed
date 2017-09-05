@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<project name="Toolkit" default="packaging" basedir=".">
+  <target name="packaging">
+    <jar jarfile="jar/manu-ping-daemon-1.0.jar">
+  	 <fileset dir="bin">
+  	 	<include name="log4j.properties" />
+  	 	<include name="manu/log/LogService.class" />
+  	 	<include name="manu/sql/MySqlConManager.class" />
+  	 	<include name="manu/ping/*.class" />
+  	 	<include name="manu/ping/daemon/*.class" />
+  	 </fileset>
+    </jar>
+  </target> 
+ </project>
