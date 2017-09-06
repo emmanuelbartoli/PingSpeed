@@ -11,7 +11,8 @@ Duild a Google chart with the ping results stored in a MySQL database
 ## Speed test tools
 ### SpeedTest & JSpeedTest
 A speed test that stores the U/L & D/L results into a MySQL database
-Based on https://github.com/bertrandmartel/speed-test-lib
+
+Used speed-test-lib https://github.com/bertrandmartel/speed-test-lib
 
 ### BuildSpeedChart
 Build a Google chart with the U/L & D/L results stored in a MySQL database
