@@ -1,5 +1,5 @@
 # PingSpeed
-Java tools for ping and speed tests
+Java tools for ping and speed tests with results storage in database
 
 ## Ping tools
 ### PingDaemon
