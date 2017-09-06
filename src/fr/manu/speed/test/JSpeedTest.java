@@ -1,4 +1,4 @@
-package manu.speed.test;
+package fr.manu.speed.test;
 
 import java.awt.Color;
 import java.awt.Cursor;
@@ -17,7 +17,7 @@ import javax.swing.border.EmptyBorder;
 
 import org.apache.commons.lang3.StringUtils;
 
-import manu.log.LogService;
+import fr.manu.log.LogService;
 
 public class JSpeedTest extends JFrame {
 

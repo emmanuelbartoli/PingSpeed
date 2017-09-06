@@ -1,4 +1,4 @@
-package manu.speed.test;
+package fr.manu.speed.test;
 
 
 import java.awt.Color;

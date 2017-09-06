@@ -1,4 +1,4 @@
-package manu.ping.chart;
+package fr.manu.ping.chart;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -20,11 +20,11 @@ import java.util.ResourceBundle;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 
+import fr.manu.log.LogService;
+import fr.manu.ping.Ping;
+import fr.manu.ping.PingDAO;
+import fr.manu.sql.MySqlConManager;
 import it.sauronsoftware.ftp4j.FTPClient;
-import manu.log.LogService;
-import manu.ping.Ping;
-import manu.ping.PingDAO;
-import manu.sql.MySqlConManager;
 
 /**
  * 

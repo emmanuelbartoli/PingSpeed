@@ -1,10 +1,10 @@
-package manu.sql;
+package fr.manu.sql;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import manu.log.LogService;
+import fr.manu.log.LogService;
 
 public class MySqlConManager {
 

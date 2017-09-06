@@ -1,4 +1,4 @@
-package manu.ping;
+package fr.manu.ping;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,9 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import manu.log.LogService;
-import manu.ping.daemon.Daemon;
-import manu.ping.daemon.Daemon.Status;
+import fr.manu.log.LogService;
+import fr.manu.ping.daemon.Daemon;
+import fr.manu.ping.daemon.Daemon.Status;
 
 /**
  * 

@@ -1,4 +1,4 @@
-package manu.ping.daemon;
+package fr.manu.ping.daemon;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -19,11 +19,11 @@ import java.util.StringTokenizer;
 
 import org.apache.commons.lang3.SystemUtils;
 
-import manu.log.LogService;
-import manu.ping.Ping;
-import manu.ping.PingDAO;
-import manu.ping.daemon.Daemon.Status;
-import manu.sql.MySqlConManager;
+import fr.manu.log.LogService;
+import fr.manu.ping.Ping;
+import fr.manu.ping.PingDAO;
+import fr.manu.ping.daemon.Daemon.Status;
+import fr.manu.sql.MySqlConManager;
 
 /**
  * 

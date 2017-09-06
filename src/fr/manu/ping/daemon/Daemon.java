@@ -1,4 +1,4 @@
-package manu.ping.daemon;
+package fr.manu.ping.daemon;
 
 public class Daemon {
 	/**

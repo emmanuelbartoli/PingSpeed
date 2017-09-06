@@ -4,10 +4,10 @@
     <jar jarfile="jar/manu-ping-daemon-1.0.jar">
   	 <fileset dir="bin">
   	 	<include name="log4j.properties" />
-  	 	<include name="manu/log/LogService.class" />
-  	 	<include name="manu/sql/MySqlConManager.class" />
-  	 	<include name="manu/ping/*.class" />
-  	 	<include name="manu/ping/daemon/*.class" />
+  	 	<include name="fr/manu/log/LogService.class" />
+  	 	<include name="fr/manu/sql/MySqlConManager.class" />
+  	 	<include name="fr/manu/ping/*.class" />
+  	 	<include name="fr/manu/ping/daemon/*.class" />
   	 </fileset>
     </jar>
   </target> 

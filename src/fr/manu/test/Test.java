@@ -1,6 +1,6 @@
-package manu.test;
+package fr.manu.test;
 
-import manu.log.LogService;
+import fr.manu.log.LogService;
 
 public class Test {
 

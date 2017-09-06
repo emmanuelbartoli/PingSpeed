@@ -1,4 +1,4 @@
-package manu.speed.test;
+package fr.manu.speed.test;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
@@ -16,11 +16,11 @@ import fr.bmartel.speedtest.SpeedTestReport;
 import fr.bmartel.speedtest.inter.ISpeedTestListener;
 import fr.bmartel.speedtest.model.SpeedTestError;
 import fr.bmartel.speedtest.model.SpeedTestMode;
-import manu.log.LogService;
-import manu.speed.Speed;
-import manu.speed.SpeedDAO;
-import manu.speed.test.MySpeedTestSocket.Status;
-import manu.sql.MySqlConManager;
+import fr.manu.log.LogService;
+import fr.manu.speed.Speed;
+import fr.manu.speed.SpeedDAO;
+import fr.manu.speed.test.MySpeedTestSocket.Status;
+import fr.manu.sql.MySqlConManager;
 
 /**
  * Speed test

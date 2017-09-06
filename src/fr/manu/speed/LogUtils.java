@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-package manu.speed;
+package fr.manu.speed;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

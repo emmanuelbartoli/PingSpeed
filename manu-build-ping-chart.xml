@@ -4,12 +4,12 @@
     <jar jarfile="jar/manu-build-ping-chart-1.0.jar">
   	 <fileset dir="bin">
   	 	<include name="log4j.properties" />
-  	 	<include name="manu/log/LogService.class" />
-  	 	<include name="manu/sql/MySqlConManager.class" />
-  	 	<include name="manu/ping/*.class" />
-  	 	<include name="manu/ping/chart/*.class" />
-  	 	<include name="manu/ping/chart/*.html" />
-  	 	<include name="manu/ping/chart/*.js" />
+  	 	<include name="fr/manu/log/LogService.class" />
+  	 	<include name="fr/manu/sql/MySqlConManager.class" />
+  	 	<include name="fr/manu/ping/*.class" />
+  	 	<include name="fr/manu/ping/chart/*.class" />
+  	 	<include name="fr/manu/ping/chart/*.html" />
+  	 	<include name="fr/manu/ping/chart/*.js" />
   	 </fileset>
     </jar>
   </target> 

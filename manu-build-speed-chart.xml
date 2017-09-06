@@ -4,12 +4,12 @@
     <jar jarfile="jar/manu-build-speed-chart-1.0.jar">
   	 <fileset dir="bin">
   	 	<include name="log4j.properties" />
-  	 	<include name="manu/log/LogService.class" />
-  	 	<include name="manu/sql/MySqlConManager.class" />
-  	 	<include name="manu/speed/*.class" />
-  	 	<include name="manu/speed/chart/*.class" />
-  	 	<include name="manu/speed/chart/*.html" />
-  	 	<include name="manu/speed/chart/*.js" />
+  	 	<include name="fr/manu/log/LogService.class" />
+  	 	<include name="fr/manu/sql/MySqlConManager.class" />
+  	 	<include name="fr/manu/speed/*.class" />
+  	 	<include name="fr/manu/speed/chart/*.class" />
+  	 	<include name="fr/manu/speed/chart/*.html" />
+  	 	<include name="fr/manu/speed/chart/*.js" />
   	 </fileset>
     </jar>
   </target> 

@@ -1,4 +1,4 @@
-package manu.speed;
+package fr.manu.speed;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

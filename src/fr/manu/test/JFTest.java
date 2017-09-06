@@ -1,4 +1,4 @@
-package manu.test;
+package fr.manu.test;
 
 import java.awt.Color;
 import java.awt.EventQueue;

@@ -1,5 +1,5 @@
 /** Package declaration*/
-package manu.log;
+package fr.manu.log;
 
 /** Class Import */
 import java.io.PrintWriter;

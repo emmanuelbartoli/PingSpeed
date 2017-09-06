@@ -4,10 +4,10 @@
     <jar jarfile="jar/manu-speed-test-1.0.jar">
   	 <fileset dir="bin">
   	 	<include name="log4j.properties" />
-  	 	<include name="manu/log/LogService.class" />
-  	 	<include name="manu/sql/MySqlConManager.class" />
-  	 	<include name="manu/speed/*.class" />
-  	 	<include name="manu/speed/test/*.class" />
+  	 	<include name="fr/manu/log/LogService.class" />
+  	 	<include name="fr/manu/sql/MySqlConManager.class" />
+  	 	<include name="fr/manu/speed/*.class" />
+  	 	<include name="fr/manu/speed/test/*.class" />
   	 </fileset>
     </jar>
   </target> 

@@ -1,4 +1,4 @@
-package manu.speed;
+package fr.manu.speed;
 
 public class Speed {
 	

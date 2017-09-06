@@ -1,4 +1,4 @@
-package manu.ping;
+package fr.manu.ping;
 
 public class Ping {
 	
