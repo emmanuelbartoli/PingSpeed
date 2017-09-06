@@ -139,7 +139,7 @@ public class JSpeedTest extends JFrame {
 			// Exit //
 			//////////
 			CustomColorButton btnExit = new CustomColorButton( Color.BLUE, Color.WHITE);
-			btnExit.setBounds(64, 169, 152, 36);
+			btnExit.setBounds(64, 164, 152, 36);
 			btnExit.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					System.exit(0);
