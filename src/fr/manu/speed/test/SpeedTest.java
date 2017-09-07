@@ -41,7 +41,7 @@ public class SpeedTest {
 	 * 
 	 */
     @SuppressWarnings("unused")
-	private final static String SPEED_TEST_SERVER_URI_DL = "http://2.testdebit.info/fichiers/200Mo.dat";
+	private final static String SPEED_TEST_SERVER_URI_DL = "http://2.testdebit.info/500M.iso";
     
     
     /**
@@ -53,7 +53,7 @@ public class SpeedTest {
     /**
      * upload 20Mo file size.
      */
-    private static final int FILE_SIZE = 20000000;
+    private static final int FILE_SIZE = 50000000;
     
     /**
      * socket timeout used in ms.
