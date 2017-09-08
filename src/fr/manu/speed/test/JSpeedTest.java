@@ -159,27 +159,27 @@ public class JSpeedTest extends JFrame {
 			panelResult.add(upload);
 			
 			
-			///////////
-			// Exit //
-			//////////
-			CustomColorButton btnExit = new CustomColorButton( Color.BLUE, Color.WHITE);
-			btnExit.setBounds(95, Y + 170, 330, 36);
-			btnExit.addActionListener(new ActionListener() {
+			//////////////////
+			// Stop / Exit //
+			/////////////////
+			CustomColorButton btnStopExit = new CustomColorButton( Color.BLUE, Color.WHITE);
+			btnStopExit.setBounds(95, Y + 170, 330, 36);
+			btnStopExit.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					System.exit(0);
 				}
 			});
-			btnExit.setText("Stop");
-			btnExit.setBorder(null);
-			btnExit.setFocusable(false);
-			btnExit.setFont(new Font("Tahoma", Font.PLAIN, 25));
+			btnStopExit.setText("Stop");
+			btnStopExit.setBorder(null);
+			btnStopExit.setFocusable(false);
+			btnStopExit.setFont(new Font("Tahoma", Font.PLAIN, 25));
 			
 			/////////////////////////////////
 			// Add the panels to the frame //
 			/////////////////////////////////
 			contentPane.add(lblTitle);
 			contentPane.add(panelResult);
-			contentPane.add(btnExit);
+			contentPane.add(btnStopExit);
 			
 		
 			/////////////////
@@ -190,7 +190,7 @@ public class JSpeedTest extends JFrame {
 					// Execute the speed test
 					SpeedTest speedTest = new SpeedTest(confFilePath,donwload,upload);
 					speedTest.execute();
-					btnExit.setText("Exit");
+					btnStopExit.setText("Exit");
 				}
 			};
 			speedThread.start();
