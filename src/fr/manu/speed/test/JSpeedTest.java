@@ -18,6 +18,8 @@ import javax.swing.border.EmptyBorder;
 import org.apache.commons.lang3.StringUtils;
 
 import fr.manu.log.LogService;
+import javax.swing.border.LineBorder;
+import javax.swing.SwingConstants;
 
 public class JSpeedTest extends JFrame {
 
@@ -33,6 +35,28 @@ public class JSpeedTest extends JFrame {
 	private static LogService log = new LogService(
 			JSpeedTest.class.getName(),
 			JSpeedTest.class.getSimpleName());
+	
+	/**
+	 * 
+	 */
+	private static int X = 20;
+	
+	/**
+	 * 
+	 */
+	private static int Y = 20;
+	
+	/**
+	 * 
+	 */
+	private static  int Y1=20;
+	
+	/**
+	 * 
+	 */
+	private static  int Y2=60;
+	
+	
 	
 	
 	/**
@@ -68,7 +92,7 @@ public class JSpeedTest extends JFrame {
 			
 			setResizable(false);
 			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			setBounds(100, 100, 314, 250);
+			setBounds(100, 100, 486, 273);
 			
 			////////////////
 			// MAIN PANEL //
@@ -82,56 +106,56 @@ public class JSpeedTest extends JFrame {
 			////////////
 			// TITLE //
 			///////////
-			JLabel lblTitle = new JLabel("Speed Test");
+			JLabel lblTitle = new JLabel("Speed Test", SwingConstants.CENTER);
+			lblTitle.setVerticalAlignment(SwingConstants.TOP);
 			lblTitle.setFont(new Font("Arial", Font.PLAIN, 30));
 			lblTitle.setForeground(Color.BLUE);
-			lblTitle.setBounds(64, 0, 152, 39);
+			lblTitle.setBorder(new LineBorder(Color.BLUE));
+			lblTitle.setBounds(97, Y, 328, 39);
 			
 			//////////////////
 			// RESULT PANEL //
 			//////////////////
 			JPanel panelResult = new JPanel();
+			panelResult.setBorder(new LineBorder(Color.BLUE));
 			panelResult.setBackground(Color.WHITE);
-			panelResult.setBounds(10, 45, 289, 108);
+			panelResult.setBounds(97, Y+50, 328, 108);
 			panelResult.setLayout(null);
 			
-			int Y1=20;
 			JLabel lblDownload = new JLabel("Download");
 			lblDownload.setForeground(Color.BLUE);
 			lblDownload.setFont(new Font("Arial", Font.PLAIN, 25));
-			lblDownload.setBounds(0, Y1, 124, 24);
+			lblDownload.setBounds(X+0, Y1, 124, 24);
 			panelResult.add(lblDownload);
 			
 			JLabel labelSm1 = new JLabel(":");
 			labelSm1.setForeground(Color.BLUE);
 			labelSm1.setFont(new Font("Arial", Font.PLAIN, 25));
-			labelSm1.setBounds(118, Y1, 18, 24);
+			labelSm1.setBounds(X+118, Y1, 18, 24);
 			panelResult.add(labelSm1);
 			
 			JLabel donwload = new JLabel("0 %");
 			donwload.setFont(new Font("Arial", Font.PLAIN, 25));
 			donwload.setForeground(Color.BLUE);
-			donwload.setBounds(130,Y1, 159, 24);
+			donwload.setBounds(X+130,Y1, 159, 24);
 			panelResult.add(donwload);
 			
-			int Y2=60;
 			JLabel lblUpload = new JLabel("Upload");
 			lblUpload.setForeground(Color.BLUE);
 			lblUpload.setFont(new Font("Arial", Font.PLAIN, 25));
-			lblUpload.setBounds(0, Y2, 124, 24);
+			lblUpload.setBounds(X, Y2, 124, 24);
 			panelResult.add(lblUpload);
 			
 			JLabel labelSM2 = new JLabel(":");
 			labelSM2.setForeground(Color.BLUE);
 			labelSM2.setFont(new Font("Arial", Font.PLAIN, 25));
-			labelSM2.setBounds(118, Y2, 18, 24);
+			labelSM2.setBounds(X+118, Y2, 18, 24);
 			panelResult.add(labelSM2);
-			
 			
 			JLabel upload = new JLabel("0 %");
 			upload.setForeground(Color.BLUE);
 			upload.setFont(new Font("Arial", Font.PLAIN, 25));
-			upload.setBounds(130, Y2, 159, 24);
+			upload.setBounds(X+130, Y2, 159, 24);
 			panelResult.add(upload);
 			
 			
@@ -139,13 +163,13 @@ public class JSpeedTest extends JFrame {
 			// Exit //
 			//////////
 			CustomColorButton btnExit = new CustomColorButton( Color.BLUE, Color.WHITE);
-			btnExit.setBounds(64, 164, 152, 36);
+			btnExit.setBounds(95, Y + 170, 330, 36);
 			btnExit.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					System.exit(0);
 				}
 			});
-			btnExit.setText("Exit");
+			btnExit.setText("Stop");
 			btnExit.setBorder(null);
 			btnExit.setFocusable(false);
 			btnExit.setFont(new Font("Tahoma", Font.PLAIN, 25));
@@ -166,6 +190,7 @@ public class JSpeedTest extends JFrame {
 					// Execute the speed test
 					SpeedTest speedTest = new SpeedTest(confFilePath,donwload,upload);
 					speedTest.execute();
+					btnExit.setText("Exit");
 				}
 			};
 			speedThread.start();
