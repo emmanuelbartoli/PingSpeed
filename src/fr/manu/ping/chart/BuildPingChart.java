@@ -56,17 +56,17 @@ public class BuildPingChart {
 	/**
 	 * 
 	 */
-	private String MAIN_HTML="manu/ping/chart/ping.html";
+	private String MAIN_HTML="fr/manu/ping/chart/ping.html";
 	
 	/**
 	 * 
 	 */
-	private String PING_JS="manu/ping/chart/ping.js";
+	private String PING_JS="fr/manu/ping/chart/ping.js";
 	
 	/**
 	 * 
 	 */
-	private String BODY_HTML="manu/ping/chart/body.html";
+	private String BODY_HTML="fr/manu/ping/chart/body.html";
 	
 	/**
 	 * Intervals displayed in the chart

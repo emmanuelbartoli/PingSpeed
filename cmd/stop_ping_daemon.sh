@@ -110,7 +110,7 @@ echo
 
 # Test if the daemon is not stopped
 echo "Status before stop"
-. $HOME/cmd/status_ping_daemon.sh
+. $HOME/java/cmd/status_ping_daemon.sh
 if [ $DAEMON_PROCESS -eq 0 ] ; then
   echo
   echo "No ping daemon is running, there is nothing to stop !"
@@ -126,7 +126,7 @@ return_code=$?
 
 echo
 echo "Status after stop"
-. $HOME/cmd/status_ping_daemon.sh
+. $HOME/java/cmd/status_ping_daemon.sh
 
 # Exit
 sh_exit $return_code

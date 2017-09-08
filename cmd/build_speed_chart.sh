@@ -1,6 +1,6 @@
 #!/bin/sh
 # 
-# build the ping html chart
+# build the speed html chart
 #
 # Emmanuel Bartoli
 # Creation : 20/08/2017
@@ -54,12 +54,12 @@ sh_exit()
 sh_start
 
 echo
-echo "Build the ping html chart..."
+echo "Build the speed html chart..."
 echo
 
-# Build the ping html chart
-MY_CLASSPATH=$HOME/java/bin/manu-build-ping-chart-1.0.jar:$HOME/java/lib/ftp4j-1.7.2.jar:$HOME/java/lib/commons-io-2.5.jar:$HOME/java/lib/log4j-1.2.17.jar:$HOME/java/lib/commons-logging-1.2.jar:$HOME/java/lib/commons-lang3-3.6.jar:$HOME/java/lib/mysql-connector-java-5.1.42-bin.jar
-java -Xmx256m -Xms128m -cp $MY_CLASSPATH fr.manu.ping.chart.BuildPingChart $HOME/java/conf/ping.properties
+# Build the speed html chart
+MY_CLASSPATH=$HOME/java/bin/manu-build-speed-chart-1.0.jar:$HOME/java/lib/ftp4j-1.7.2.jar:$HOME/java/lib/commons-io-2.5.jar:$HOME/java/lib/log4j-1.2.17.jar:$HOME/java/lib/commons-logging-1.2.jar:$HOME/java/lib/commons-lang3-3.6.jar:$HOME/java/lib/mysql-connector-java-5.1.42-bin.jar
+java -Xmx256m -Xms128m -cp $MY_CLASSPATH fr.manu.speed.chart.BuildSpeedChart $HOME/java/conf/speedtest.properties
 
 sh_exit $?
 

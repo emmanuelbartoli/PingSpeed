@@ -92,7 +92,7 @@ public class JSpeedTest extends JFrame {
 			
 			setResizable(false);
 			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			setBounds(100, 100, 486, 273);
+			setBounds(100, 100, 486, 290);
 			
 			////////////////
 			// MAIN PANEL //

@@ -113,7 +113,7 @@ echo
 
 # Test if the daemon is not running
 echo "Status before start"
-. $HOME/cmd/status_ping_daemon.sh 
+. $HOME/java/cmd/status_ping_daemon.sh 
 if [ $DAEMON_PROCESS -gt 0 ] ; then
   echo
   echo "At least one ping daemon is running, it's not allowed to start another one !"
@@ -135,7 +135,7 @@ mysql --user=$DB_USER --password=$DB_PASSWORD  --execute="update DAEMON_PARAMETE
 
 # Start the daemon
 MY_CLASSPATH=$HOME/java/bin/manu-ping-daemon-1.0.jar:$HOME/java/lib/commons-io-2.5.jar:$HOME/java/lib/log4j-1.2.17.jar:$HOME/java/lib/commons-logging-1.2.jar:$HOME/java/lib/commons-lang3-3.6.jar:$HOME/java/lib/mysql-connector-java-5.1.42-bin.jar
-nohup java -cp $MY_CLASSPATH fr.manu.ping.daemon.PingDaemon $HOME/java/conf/ping_daemon.properties > $LOG_FILE 2> $ERR_FILE &
+nohup java -cp $MY_CLASSPATH fr.manu.ping.daemon.PingDaemon $HOME/java/conf/ping.properties > $LOG_FILE 2> $ERR_FILE &
 
 echo
 check_prc_start "manu-ping-daemon"
@@ -144,7 +144,7 @@ return_code=$?
 # Check the status
 echo
 echo "Status after start"
-. $HOME/cmd/status_ping_daemon.sh
+. $HOME/java/cmd/status_ping_daemon.sh
 
 sh_exit $return_code
 
