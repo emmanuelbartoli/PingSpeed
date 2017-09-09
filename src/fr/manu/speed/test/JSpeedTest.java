@@ -44,6 +44,11 @@ public class JSpeedTest extends JFrame {
 	/**
 	 * 
 	 */
+	private static int X1 = 20;
+	
+	/**
+	 * 
+	 */
 	private static int Y = 20;
 	
 	/**
@@ -92,7 +97,7 @@ public class JSpeedTest extends JFrame {
 			
 			setResizable(false);
 			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			setBounds(100, 100, 486, 290);
+			setBounds(100, 100, 377, 274);
 			
 			////////////////
 			// MAIN PANEL //
@@ -111,7 +116,7 @@ public class JSpeedTest extends JFrame {
 			lblTitle.setFont(new Font("Arial", Font.PLAIN, 30));
 			lblTitle.setForeground(Color.BLUE);
 			lblTitle.setBorder(new LineBorder(Color.BLUE));
-			lblTitle.setBounds(97, Y, 328, 39);
+			lblTitle.setBounds(X, Y, 328, 39);
 			
 			//////////////////
 			// RESULT PANEL //
@@ -119,43 +124,43 @@ public class JSpeedTest extends JFrame {
 			JPanel panelResult = new JPanel();
 			panelResult.setBorder(new LineBorder(Color.BLUE));
 			panelResult.setBackground(Color.WHITE);
-			panelResult.setBounds(97, Y+50, 328, 108);
+			panelResult.setBounds(X, Y+50, 328, 108);
 			panelResult.setLayout(null);
 			
 			JLabel lblDownload = new JLabel("Download");
 			lblDownload.setForeground(Color.BLUE);
 			lblDownload.setFont(new Font("Arial", Font.PLAIN, 25));
-			lblDownload.setBounds(X+0, Y1, 124, 24);
+			lblDownload.setBounds(X1+0, Y1, 124, 24);
 			panelResult.add(lblDownload);
 			
 			JLabel labelSm1 = new JLabel(":");
 			labelSm1.setForeground(Color.BLUE);
 			labelSm1.setFont(new Font("Arial", Font.PLAIN, 25));
-			labelSm1.setBounds(X+118, Y1, 18, 24);
+			labelSm1.setBounds(X1+118, Y1, 18, 24);
 			panelResult.add(labelSm1);
 			
 			JLabel donwload = new JLabel("0 %");
 			donwload.setFont(new Font("Arial", Font.PLAIN, 25));
 			donwload.setForeground(Color.BLUE);
-			donwload.setBounds(X+130,Y1, 159, 24);
+			donwload.setBounds(X1+130,Y1, 159, 24);
 			panelResult.add(donwload);
 			
 			JLabel lblUpload = new JLabel("Upload");
 			lblUpload.setForeground(Color.BLUE);
 			lblUpload.setFont(new Font("Arial", Font.PLAIN, 25));
-			lblUpload.setBounds(X, Y2, 124, 24);
+			lblUpload.setBounds(X1, Y2, 124, 24);
 			panelResult.add(lblUpload);
 			
 			JLabel labelSM2 = new JLabel(":");
 			labelSM2.setForeground(Color.BLUE);
 			labelSM2.setFont(new Font("Arial", Font.PLAIN, 25));
-			labelSM2.setBounds(X+118, Y2, 18, 24);
+			labelSM2.setBounds(X1+118, Y2, 18, 24);
 			panelResult.add(labelSM2);
 			
 			JLabel upload = new JLabel("0 %");
 			upload.setForeground(Color.BLUE);
 			upload.setFont(new Font("Arial", Font.PLAIN, 25));
-			upload.setBounds(X+130, Y2, 159, 24);
+			upload.setBounds(X1+130, Y2, 159, 24);
 			panelResult.add(upload);
 			
 			
@@ -163,7 +168,7 @@ public class JSpeedTest extends JFrame {
 			// Stop / Exit //
 			/////////////////
 			CustomColorButton btnStopExit = new CustomColorButton( Color.BLUE, Color.WHITE);
-			btnStopExit.setBounds(95, Y + 170, 330, 36);
+			btnStopExit.setBounds(X, Y + 170, 330, 36);
 			btnStopExit.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					System.exit(0);
