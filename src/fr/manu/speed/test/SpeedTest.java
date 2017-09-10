@@ -107,8 +107,8 @@ public class SpeedTest {
 	/**
 	 * 
 	 * @param confFilePath
-	 * @param jLblDownload
-	 * @param jLblUpload
+	 * @param jLblDownload in the UI
+	 * @param jLblUpload in the UI
 	 */
 	public SpeedTest(String confFilePath,JLabel jLblDownload,JLabel jLblUpload) {
 		this.confFilePath = confFilePath;
@@ -292,6 +292,7 @@ public class SpeedTest {
 			case ON_START:
 			case ON_PROGRESS:
 				
+				// Update the progress in the UI
 				if ((jLblDownload != null) && (jLblUpload != null)) {
 					switch (mode) {
 					case DOWNLOAD:
