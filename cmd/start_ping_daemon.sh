@@ -134,7 +134,7 @@ find $HOME/logs  -mtime +7 -type f -name "*.gz" -delete
 mysql --user=$DB_USER --password=$DB_PASSWORD  --execute="update DAEMON_PARAMETERS set DAP_STATUS ='TO_START';COMMIT" $DB_NAME 
 
 # Start the daemon
-MY_CLASSPATH=$HOME/java/bin/manu-ping-daemon-1.0.jar:$HOME/java/lib/commons-io-2.5.jar:$HOME/java/lib/log4j-1.2.17.jar:$HOME/java/lib/commons-logging-1.2.jar:$HOME/java/lib/commons-lang3-3.6.jar:$HOME/java/lib/mysql-connector-java-5.1.42-bin.jar
+MY_CLASSPATH=$HOME/java/bin/manu-ping-speed-1.0.jar:$HOME/java/lib/commons-io-2.5.jar:$HOME/java/lib/log4j-1.2.17.jar:$HOME/java/lib/commons-logging-1.2.jar:$HOME/java/lib/commons-lang3-3.6.jar:$HOME/java/lib/mysql-connector-java-5.1.42-bin.jar
 nohup java -cp $MY_CLASSPATH fr.manu.ping.daemon.PingDaemon $HOME/java/conf/ping.properties > $LOG_FILE 2> $ERR_FILE &
 
 echo
