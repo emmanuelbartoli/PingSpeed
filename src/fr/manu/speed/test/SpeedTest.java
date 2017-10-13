@@ -51,9 +51,9 @@ public class SpeedTest {
     private static final String SPEED_TEST_SERVER_URI_UL = "http://2.testdebit.info/";
     
     /**
-     * upload 20Mo file size.
+     * default upload size = 20M
      */
-    private static final int FILE_SIZE = 50000000;
+    private static final int UPLOAD_SIZE_MB = 20;
     
     /**
      * socket timeout used in ms.
@@ -163,15 +163,17 @@ public class SpeedTest {
 			// Speed test files
 			String downloadURI = resource.getString("speed.download.uri");
 			String uploadURI   = resource.getString("speed.upload.uri");
+			int uploadSizeMB   = Integer.valueOf(resource.getString("speed.upload.size.mb")) ;
 			
 			
 			// Log
-			log.info("speed.download.uri  = " + downloadURI);
-			log.info("speed.upload.uri    = " + uploadURI);
-			log.debug("mysql.server        = " + mysqlServer);
-			log.debug("mysql.port          = " + mysqlPort);
-			log.debug("mysql.database      = " + mysqlDatabase);
-			log.debug("mysql.user          = " + mysqlUser);
+			log.info("speed.download.uri   = " + downloadURI);
+			log.info("speed.upload.uri     = " + uploadURI);
+			log.info("speed.upload.size.mb = " + uploadSizeMB);
+			log.debug("mysql.server         = " + mysqlServer);
+			log.debug("mysql.port           = " + mysqlPort);
+			log.debug("mysql.database       = " + mysqlDatabase);
+			log.debug("mysql.user           = " + mysqlUser);
 			
 			// Close the streams
 			bufferedInputStream.close();   
@@ -187,7 +189,7 @@ public class SpeedTest {
 			//  Upload speed  //
 			////////////////////
 			log.info("Looking for the upload speed...");
-			uploadSpeed = doTest(uploadURI,SpeedTestMode.UPLOAD);
+			uploadSpeed = doTest(uploadURI,uploadSizeMB,SpeedTestMode.UPLOAD);
 			
 			////////////////////
 			//  Speed results //
@@ -239,10 +241,21 @@ public class SpeedTest {
 	/**
 	 * 
 	 * @param uri
+	 * @param mode
+	 * @return
+	 */
+	private float doTest(String uri,SpeedTestMode mode) {
+		return doTest(uri,UPLOAD_SIZE_MB,mode);
+	}
+	
+	/**
+	 * 
+	 * @param uri
+	 * @param upload size in MB
 	 * @param mode DOWNLOAD/UPLOAD
 	 * @return speed expresses with Mbits/second
 	 */
-	private float doTest(String uri,SpeedTestMode mode) {
+	private float doTest(String uri,int uploadSizeMB,SpeedTestMode mode) {
 		
 		// Init. the speed
 		float speed = Speed.ZERO;
@@ -279,7 +292,7 @@ public class SpeedTest {
 			speedTestSocket.startDownload(uri);
 			break;
 		case UPLOAD:
-			speedTestSocket.startUpload(uri, FILE_SIZE);
+			speedTestSocket.startUpload(uri, uploadSizeMB*1024*1024);
 			break;
 		case NONE:
 		default:
