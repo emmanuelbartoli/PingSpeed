@@ -74,12 +74,12 @@ public class BuildSpeedChart {
 	private static enum Interval {
 		//TWENTY_FOUR_HOURS("24 hours", "24 HOUR"), 
 		//THREE_DAYS("three days", "3 DAY"), 
-		ONE_WEEK("one week", "1 WEEK"), 
-		TWO_WEEKS("two weeks", "2 WEEK"), 
+		//ONE_WEEK("one week", "1 WEEK"), 
+		//TWO_WEEKS("two weeks", "2 WEEK"), 
 		ONE_MONTH("one month","1 MONTH"), 
-		THREE_MONTHS("three months","3 MONTH"), 
-		//SIX_MONTHS("six months", "6 MONTH"), 
-		//ONE_YEAR("one year", "1 YEAR")
+		//THREE_MONTHS("three months","3 MONTH"), 
+		SIX_MONTHS("six months", "6 MONTH"), 
+		ONE_YEAR("one year", "1 YEAR")
 		;
 		private String label;
 		private String sql;
