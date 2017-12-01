@@ -54,8 +54,10 @@ public class MySqlConManager {
 		this.database = database;
 		log.debug("Attempt to connect to "+database);
 		Class.forName(DRIVER);
-			connection = DriverManager.getConnection("jdbc:mysql://" + server + ":" + port + "/" + database, user,
-				password);
+		connection = DriverManager.getConnection(
+					"jdbc:mysql://" + server + ":" + port + "/" + database, 
+					user,
+					password);
 		connection.setAutoCommit(true);
 		log.debug("Connected to "+database);
 	}
