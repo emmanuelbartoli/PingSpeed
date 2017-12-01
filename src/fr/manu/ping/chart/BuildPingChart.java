@@ -74,7 +74,7 @@ public class BuildPingChart {
 	private static enum Interval {
 		TWENTY_FOUR_HOURS("24 hours", "24 HOUR"), 
 		THREE_DAYS("three days", "3 DAY"), 
-		ONE_WEEK("one week", "1 WEEK"), 
+		// ONE_WEEK("one week", "1 WEEK"), 
 		//TWO_WEEKS("two weeks", "2 WEEK"), 
 		// TODO too many data cause issues in Google charts (missing date, memory issue ?)
 		// Solution : get average results per day
