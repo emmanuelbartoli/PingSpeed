@@ -50,9 +50,9 @@ public class PingDAO {
 	
 	
 	/**
-	 * GET_DAEMON_PARAMETER
+	 * GET_DAEMON_PARAMETERS
 	 */
-	private final static String GET_DAEMON_PARAMETER = 
+	private final static String GET_DAEMON_PARAMETERS = 
 			"select DAP_SERVER_TO_PING,DAP_PING_PACKETS,DAP_PING_INTERVAL,DAP_SLEEP,DAP_STATUS from DAEMON_PARAMETERS";
 	
 	/**
@@ -88,7 +88,7 @@ public class PingDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try {
-			pstmt = connection.prepareStatement(GET_DAEMON_PARAMETER);
+			pstmt = connection.prepareStatement(GET_DAEMON_PARAMETERS);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				daemon = new Daemon(
